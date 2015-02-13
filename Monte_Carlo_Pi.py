@@ -36,7 +36,7 @@ def in_or_out_circle(X, Y, r):
         j+=1
     return count, Z
 ####
-    
+
     
 # Generate X and Y coordinates ranging (-1,1)
 X = scale_to_coordinate(2, unif_point_generator(1000), -1)
