@@ -1,14 +1,18 @@
 '''
-Approximation of pi using Monte Carlo simulation
+Title: Approximation of pi using Monte Carlo simulation
+
+Randomly scatter points in the square and count how many point fall inside the circle
+The value of pi is approximated by comparing the relative area of circle to the square
+
+Will Daewook Kwon - will.dw.kwon@gmail.com
 
 '''
+
 import random
 import math
 random.seed(201502)
 
-
 ## PROCEDURES
-
 # Generate n points in (0,1)
 def unif_point_generator(n):
     i = 0; Data = []
@@ -34,7 +38,7 @@ def in_or_out_circle(X, Y, r):
         if Z[j] < 1:
             count += 1
         j+=1
-    return count, Z
+    return count, Zra()
 ####
 
     
@@ -46,5 +50,4 @@ num, Z = in_or_out_circle(X, Y, 1)
 # Get the proportion and solve for pi
 Estimated_Pi = ((num*4)/len(Z))
 
-print ("The Monte Carlo Estimation for Pi is: ", end = "")
-print (Estimated_Pi)
+print ("The Monte Carlo Estimation for Pi is: " + repr(Estimated_Pi) )
